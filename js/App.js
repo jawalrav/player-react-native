@@ -5,6 +5,7 @@ import {
   createStackNavigator,
   SafeAreaView
 } from 'react-navigation'
+import NetInfo from "@react-native-community/netinfo";
 
 import { StatusBar } from 'react-native'
 import OnAirPoll from './components/OnAirPoll'
@@ -20,6 +21,15 @@ import Profile from './Profile'
 import Episode from './Episode'
 import Playlist from './Playlist'
 import { colors } from './styles/main'
+import ErrorPage from './ErrorPage'
+
+
+//!NetInfo.isConnected()
+if (true){
+  ErrorPage
+}
+
+
 
 const getIconName = routeName => {
   switch (routeName) {
@@ -89,3 +99,4 @@ export default () => (
     <AppContainer />
   </SafeAreaView>
 )
+
